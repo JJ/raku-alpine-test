@@ -13,8 +13,9 @@ ENV PATH="/root/raku-install/bin:/root/raku-install/share/perl6/site/bin:/root/.
 RUN mkdir /home/raku \
     && apk update && apk upgrade \
     && apk add --no-cache $PKGS $PKGS_TMP \
-
-# Add download of tar.gz here
+    && curl -L https://github.com/MoarVM/MoarVM/releases/download/2020.01.1/MoarVM-2020.01.1.tar.gz | tar xvfz - \
+    && cd MoarVM-2020.01.1/ \
+    && perl Configure.pl && make
 
 # Runtime
 WORKDIR /home/raku
