@@ -15,7 +15,7 @@ RUN mkdir /home/raku \
     && apk add --no-cache $PKGS $PKGS_TMP \
     && curl -L https://github.com/MoarVM/MoarVM/releases/download/2020.01.1/MoarVM-2020.01.1.tar.gz | tar xvfz - \
     && cd MoarVM-2020.01.1/ \
-    && CFLAGS="-fPIC -DDL_USE_GLIBC_ITER_PHDR" perl Configure.pl && make
+    && CFLAGS="-DDL_USE_GLIBC_ITER_PHDR" perl Configure.pl && make
 
 # Runtime
 WORKDIR /home/raku
