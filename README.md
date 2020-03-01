@@ -1,4 +1,4 @@
-# raku-alpine-test
+# Tester for Alpine builds
 
-Testing Moar builds for Alpine
+Testing MoarVM builds in Alpine. This is not intended for final use, it's just a provisional image that is used to test Alpine builds.
  
