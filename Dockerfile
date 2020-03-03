@@ -19,4 +19,4 @@ RUN mkdir /home/raku \
 
 # Runtime
 WORKDIR /home/raku
-ENTRYPOINT ["raku"]
+
